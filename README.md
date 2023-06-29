@@ -20,9 +20,9 @@ If you want to use a different model, just replace the URL in line 3 with the UR
 - Run Cell 3. This will launch KoboldAI. After it outputs some text indicating that KoboldAI launched succesfully, it will also output two URLs. Click the second one (the one that ends in "/new_ui"). This will open KoboldAI in a new browser tab, from which you will  load your model by selecting "Load Model > Load Model From Its Directory", selecting the model you downloaded in Cell 2, and clicking "OK". You'll know it has loaded correctly once the name of your model appears at the top-left of the page, and If you're using SillyTavern, you'll copy and paste thie URL from this web page into the API URL field in SillyTavern, under the icon that looks like a plug.
 
 # Install and Run SillyTavern-Extras
-The second notebook is to install, and run the SillyTavern Extras server. This lets you use summarization and further set up things like Stable Diffusion and text to speech. I just use it for the summarization, personally. If you don't want to use this, or don't use sillytavern, don't worry about running this notebook.
+The second notebook, SILLYTAVERNEXTRAS.IPYNB, is for installing, and running the SillyTavern Extras server. This lets you use summarization and further set up things like Stable Diffusion and text to speech. I just use it for the summarization, personally. If you don't want to use this, or don't use sillytavern, don't worry about running this notebook.
 
-If you do want to use the extras server, just open it as a separate notebook
+If you do want to use the extras server, just open it as a separate notebook.
 
 -Run Cell 1.
 
