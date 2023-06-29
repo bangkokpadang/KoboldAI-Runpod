@@ -9,21 +9,22 @@ Once you're connected to your pod's web interface, you will upload these noteboo
 
 # Install KoboldAI and Download Your Model
 Open the first notebook, KOBOLDAI.IPYNB. This notebook is just for installing the current 4bit version of koboldAI, downloading a model, and running KoboldAI.
-- Run Cell 1. This will install KoboldAI, and will take about ten minutes to run. You'll know the cell is done running when the green dot in the top right of the notebook returns to white.
+- Run Cell 1. This will install KoboldAI, and will take about ten minutes to run. You'll know the cell is done running when the green dot in the top right of the notebook returns to white. IT WILL RETURN SOME "CRITICAL LIBMAMBA" ERRORS, AND WARNINGS ABOUT RUNNING PIP AS ROOT. YOU CAN SAFELY IGNORE THEM
 
 Next it will download a model. By default, I included this model: https://huggingface.co/TheBloke/WizardLM-Uncensored-SuperCOT-StoryTelling-30B-GPTQ since it is what I generally use. It is a finetuned version of WizardLM-30B that is uncensored and focused on storytelling, which is great for RP and ERP.
 If you want to use a different model, just replace the URL in line 3 with the URL for whatever model you want (making sure to choose a 4bit GPTQ model), and update the correct Parameter size in line 1, and correct groupsize in line 2. Most models these days are done with no groupsize to reduce size, and will need a groupsize of "None".
 
-- Run Cell 2. This will download the model, and will also take about ten minutes. Don't be fooled. The second cell will output text stating "Done" but it isn't actually done until it downloads the 17GB safetensors file (this file will be larger for 65b models, and smaller for 7b or 13b models). Downloading this large file is what will take the bulk of the ten minute estimate. Again, you'll know it's done downloading when the green dot in the top right of the notebookturns white.
+- Run Cell 2. This will download the model, and will also take about ten minutes. Don't be fooled. The second cell will output text stating "Done" but it isn't actually done until it downloads the 17GB safetensors file (this file will be larger for 65b models, and smaller for 7b or 13b models). Downloading this large file is what will take the bulk of the ten minute estimate. Again, you'll know it's done downloading when the green dot in the top right of the notebookturns white. IT MAY RETURN SOME ERRORS STATING " CAN NOT STAT '*.PT' : NO SUCH FILE OR DIRECTORY" OR "CREATED A FILE THAT MAY NOT BE ACCESSIBLE IN WINDOWS." YOU CAN SAFELY IGNORE THESE ERRORS
 
 # Run KoboldAI, Load Your Model, and Connect KoboldAI to SillyTavern
 - Run Cell 3. This will launch KoboldAI. After it outputs some text indicating that KoboldAI launched succesfully, it will also output two URLs. Click the second one (the one that ends in "/new_ui"). This will open KoboldAI in a new browser tab, from which you will  load your model by selecting "Load Model > Load Model From Its Directory", selecting the model you downloaded in Cell 2, and clicking "OK". You'll know it has loaded correctly once the name of your model appears at the top-left of the page, and If you're using SillyTavern, you'll copy and paste thie URL from this web page into the API URL field in SillyTavern, under the icon that looks like a plug.
-- 
 
-The second notebook is to install, and run the SillyTavern Extras server. This lets you use summarization and further set up things like Stable Diffusion and text to speech. I just use it for the summarization, personally. If you don't want to use this, or don't use sillytavern, don't worry about it.
+# Install and Run SillyTavern-Extras
+The second notebook is to install, and run the SillyTavern Extras server. This lets you use summarization and further set up things like Stable Diffusion and text to speech. I just use it for the summarization, personally. If you don't want to use this, or don't use sillytavern, don't worry about running this notebook.
+
 If you do want to use the extras server, just open it as a separate notebook
 -Run Cell 1.
--Run Cell 2. Cell 2 will take about ten minutes, and may return some errors which you can ignore. 
+-Run Cell 2. Cell 2 will take about ten minutes. IT WILL RETURN SOME ERRORS. YOU CAN SAFELY IGNORE THEM. 
 -Run Cell 3. After a brief moment, It will output a public URL, and you will copy and paste this URL into the "SillyTavern-Extras" API URL in the extras settings page in Silly Tavern, under the icon that looks like 3 blocks stacked together.
 
 # Adjust Settings in Sillytavern
