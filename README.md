@@ -26,12 +26,12 @@ If you do want to use the extras server, just open it as a separate notebook.
 
 -Run Cell 1.
 
--Run Cell 2. Cell 2 will take about ten minutes. IT WILL RETURN SOME ERRORS. YOU CAN SAFELY IGNORE THEM. 
+-Run Cell 2. Cell 2 will take about ten minutes. IT MAY RETURN SOME ERRORS ABOUT PIP'S DEPENDENCY RESOLVER AND WARNINGS ABOUT RUNNING PIP AS ROOT. YOU MAY SAFELY IGNORE THEM.
+ 
 
--Run Cell 3. After a brief moment, It will output a public URL, and you will copy and paste this URL into the "SillyTavern-Extras" API URL in the extras settings page in Silly Tavern, under the icon that looks like 3 blocks stacked together. IT MAY RETURN SOME ERRORS ABOUT PIP'S DEPENDENCY RESOLVER AND WARNINGS ABOUT RUNNING PIP AS ROOT. YOU MAY SAFELY IGNORE THEM.
+-Run Cell 3. After a brief moment, It will output a public URL, and you will copy and paste this URL into the "SillyTavern-Extras" API URL in the extras settings page in Silly Tavern, under the icon that looks like 3 blocks stacked together.
 
 # Adjust Settings in Sillytavern
-
 First, the default model in the KOBOLDAI.IPYNB notebook is based on WizardLM, and is an "Instruct" model. That means you'll need to change the AI Response formatting settings in SillyTavern, under the icon that looks like an "A". You will need to check all 3 boxes under the "Instruct Mode Settings" (Enabled, Wrap Sequences in New Line, Include Names). Then, under the "Presets" section, select "Wizard LM" from the dropdown menu. Lastly, under the "Tokenizer" Settings, Select "Sentencepiece (LLaMA). 
 
 If you are using a chat model, such as "Pygmalion" you will uncheck the "Enabled" option under "Instruct Mode."
